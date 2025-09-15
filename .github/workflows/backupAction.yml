@@ -19,7 +19,7 @@
             continue-on-error: true
           - run: npm run run-backup ${{ secrets.NOTION_PAGE_IDS }} ${{ secrets.NOTION_TOKEN }}
           - name: backup as artifact
-            uses: actions/upload-artifact@v3
+            uses: actions/upload-artifact@v4
             with: 
               name: notion-backup-zip
               path: backupZip
